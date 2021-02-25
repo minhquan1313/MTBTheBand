@@ -4,10 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>MTBTheBand</title>
-        <link rel="shortcut icon" href="/assets/img/icon/sun.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="./assets/img/icon/sun.png" type="image/x-icon" />
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/reponsive.css" />
-        <link rel="stylesheet" href="./assets/fonts/icons/themify-icons.css" />
+        <link rel="stylesheet" href="./assets/fonts/themify/themify-icons.css" />
         <script src="https://kit.fontawesome.com/008a52e9c4.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -258,10 +258,10 @@
             };
             // Bo qua cac the a co duong link = ?
             var ignoreLink = document.querySelectorAll("a[href*='?']");
-            console.log(ignoreLink);
-            for (var i = 0; i <= ignoreLink.length; i++) {
+            // console.log(ignoreLink);
+            for (var i = 0; i < ignoreLink.length; i++) {
                 var item = ignoreLink[i];
-                console.log(item);
+                // console.log(item);
                 item.onclick = function (abc) {
                     abc.preventDefault();
                 };
