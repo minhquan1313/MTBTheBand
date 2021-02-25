@@ -26,7 +26,7 @@
     }
 
     #header {
-        height: 45px;
+        /* height: 45px; */
     }
 
     #nav li a {
@@ -84,7 +84,7 @@
 
     /*  */
     #header {
-        height: 44px;
+        /* height: 44px; */
         /* height: auto; */
         overflow: hidden;
         background-color: #aa93fe;
