@@ -1,0 +1,446 @@
+@font-face {
+    font-family: mtb-Font;
+    src: url("../fonts/iCielPanton-Light.otf");
+}
+
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "mtb-Font";
+    font-size: 16px;
+    background: #f3f6f8;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #aa93fe;
+    color: white;
+}
+
+/* Thanh cuon */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aa93fe;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #7d5bf8;
+}
+
+/* 
+Thứ tự làm việc:
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+Những điều cần lưu ý:
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng(kiểu chữ, hình tròn, vuông,...)
+*/
+
+:root {
+    --header_height: 46px;
+}
+
+/* Common class */
+
+.white {
+    color: white !important;
+}
+
+.no_border {
+    border: none !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.mb-20 {
+    margin-bottom: 40px;
+}
+
+.rrow::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.rrow {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.ccol {
+    float: left;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.ccol_3 {
+    width: 33.33333%;
+}
+
+.ccol_2 {
+    width: 50%;
+}
+
+.ccol_1 {
+    width: 100%;
+}
+
+/* Main */
+
+#main {
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 14px;
+    height: var(--header_height);
+    width: 100%;
+    background-image: linear-gradient(90deg, #5a91fb, #aa93fe);
+    /* background-color: #5a91fb; */
+    /* box-shadow: 0 0 4px #aeaeaf; */
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+    display: inline-block;
+}
+
+#nav li a {
+    display: block;
+    line-height: 40px;
+    padding: 5px 24px 0;
+    color: white;
+    /* color: pink; */
+    text-transform: uppercase;
+    text-decoration: none;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: transparent;
+    transition: all 0.5s;
+}
+
+/* Để hiện dòng phụ khi rê chuột vào More */
+
+#nav .subnav li {
+    display: block;
+}
+/*PHẦN QUAN TRỌNG NHẤT CỦA SUBNAV
+Định dạng dòng phụ, cho dài ra và đi theo từng dòng */
+#nav .subnav {
+    position: absolute;
+    display: none;
+    background: white;
+    box-shadow: 0 0 10px #aeaeaf;
+    min-width: max-content;
+}
+#nav .subnav li a {
+    padding: 0 36px 0 16px;
+}
+/* Đổi kiểu chữ dòng phụ thành bình thường thay vì in hoa hết  */
+#nav .subnav a {
+    text-transform: none;
+    color: black;
+    line-height: 30px;
+}
+/* Mui ten di xuong cua MORE */
+#nav .nav_arrow {
+    font-size: 12px;
+    margin-left: 12px;
+}
+
+#header .mobile-menu_dropdown,
+#header .search_btn {
+    float: right;
+    margin-right: 8px;
+    /* display: flex; */
+}
+#header .mobile-menu_dropdown,
+#header .search_btn_mdf {
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 3px 0;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+#header .mobile-menu_dropdown {
+    display: none;
+}
+
+#header .search_btn:hover .search_btn_mdf {
+    background: #f2f6f9;
+    color: black;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/* XONG phan HEADER */
+#slider {
+    position: relative;
+    margin-top: var(--header_height);
+    padding-top: calc(100vh - var(--header_height));
+    /* 50vw + 46px + 16px */
+    background-image: url(../img/judy_alvarez.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#slider .text_header {
+    margin: 15px 0;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+#slider .text_content {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 48px;
+}
+#slider .text_description {
+    text-shadow: 0 0 2px gray;
+}
+/* XONG phan Slider */
+#content .content_container {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .content_header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#content .content_subheader {
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0.7;
+    font-size: 90%;
+    font-style: italic;
+}
+
+#content .content_about {
+    text-align: justify;
+    line-height: 1.6;
+    /* 1.6 cho tiếng Việt, 1.4 cho tiếng Anh */
+}
+
+#content .member_list {
+    margin-top: 40px;
+    margin-bottom: 56px;
+    /* Cái này là để nó lấy luôn phần hình, tại hình đang là float left nên phải có cái này */
+}
+
+#content .member_name {
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+#content .member_img {
+    border-radius: 4px;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+}
+/* XONG phan about */
+
+.tour_section {
+    background: linear-gradient(90deg, #5a91fb, #aa93fe);
+}
+
+.tour_section .list_item {
+    background: #f3f6f8;
+    list-style-type: none;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.tour_section .list_item li {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    color: #8b8e8e;
+}
+
+.tour_section .completed {
+    background: linear-gradient(90deg, #5a91fb, #aa93fe);
+    padding: 6px 6px 4px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.tour_section .incompleted {
+    float: right;
+    background: linear-gradient(90deg, #5792ff, #45bcfb);
+    padding: 6px 6px 4px;
+    border-radius: 4px;
+    margin-top: -4px;
+    margin-right: 20px;
+}
+/* -------------------- */
+
+.tour_section .img_list {
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 56px;
+    /* KỸ THUẬT RẤT QUAN TRỌNG */
+}
+
+.tour_section .img_list .img_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    /* Rất quan trọng, để loại bỏ khoảng trắng giữa cái hình với khung thông tin phía dưới */
+}
+.tour_section .img_list .img_img:hover {
+    opacity: 0.85;
+}
+
+.tour_section .img_list .img_content {
+    padding: 15px;
+    background: #f3f6f8;
+}
+
+.tour_section .img_list .img_name {
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.tour_section .img_list .img_date {
+    opacity: 0.7;
+    margin: 15px 0;
+}
+
+.tour_section .img_list .img_detail {
+    margin-bottom: 15px;
+}
+
+.tour_section .img_list .buy_btn {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    transition: all 0.5s;
+    /* background: black; */
+    /* width: 100%; */
+    /* display: block; */
+}
+.tour_section .img_list .buy_btn:hover {
+    color: red;
+}
+
+.info_section {
+}
+
+.info_section i[class*="ti-"] {
+    font-size: 16px;
+    width: 24px;
+    display: inline-block;
+}
+
+.info_section p {
+    margin: 12px 0;
+}
+
+.info_section .form-control {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #5a91fb;
+    border-radius: 4px;
+    outline: none;
+    font-family: inherit;
+}
+
+.info_section .form-control:focus {
+    border-width: 1px;
+    border-color: #aa93fe;
+}
+
+.info_section .form-control-message {
+}
+
+.info_section textarea {
+    height: 200px;
+    resize: none;
+}
+.info_section .form-btn {
+    font-size: inherit;
+    font-family: inherit;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #5a91fb;
+    outline: none;
+}
+
+.info_section .form-btn:hover {
+    cursor: pointer;
+}
+
+.content_map {
+    background-image: url(../img/Footer/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    min-height: calc(100vh - var(--header_height) - 10vh - 56px);
+}
+
+#footer {
+    padding: 5vh 0;
+    text-align: center;
+}
+
+#footer .footer-list {
+}
+#footer .footer-list a {
+    font-size: inherit;
+    text-decoration: none;
+    color: black;
+    opacity: 0.6;
+    padding: 0 4px;
+}
+#footer .footer-text {
+}
+#footer .footer-text a {
+    text-decoration: none;
+    color: black;
+}

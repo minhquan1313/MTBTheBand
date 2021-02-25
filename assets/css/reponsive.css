@@ -1,0 +1,208 @@
+/* PC */
+@media (min-width: 64em) {
+    /* Rê chuột vào chữ chính trên header */
+    #nav > li:hover > a {
+        /* color: black; */
+        /* background-color: #f2f6f9; */
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: #fff;
+    }
+    /* Rê chuột vào các dòng phụ của More */
+    #nav .subnav li:hover {
+        background: #f2f6f9;
+        box-shadow: 0 1px #aeaeaf;
+    }
+
+    #nav li:hover .subnav {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    #main .tablet-forHide {
+        display: none;
+    }
+
+    #header {
+        height: 45px;
+    }
+
+    #nav li a {
+        padding: 5px 12px 0;
+    }
+
+    #nav li:hover .subnav {
+        display: block;
+    }
+
+    #slider {
+        margin-top: 45px;
+        padding-top: calc(100vh - 45px);
+    }
+
+    .content_map {
+        min-height: calc(100vh - 45px - 10vh - 56px);
+    }
+
+    #footer .footer-list a {
+        font-size: 24px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+/* Phone */
+@media (max-width: 46.1875em) {
+    /*  */
+    .mobile-vh {
+        min-height: calc(100vh);
+    }
+
+    .mobile-border-aeaeaf {
+        border-color: #aeaeaf !important;
+    }
+
+    .ccol {
+        float: unset;
+    }
+
+    .mobile-pt-32 {
+        padding-top: 32px !important;
+    }
+    .mobile-pt-8 {
+        padding-top: 8px !important;
+    }
+
+    .mobile-ccol {
+        width: 100%;
+        /* padding-top: 32px; */
+        /* border-top: 1px solid #aeaeaf; */
+        border-top: 1px solid #f3f6f8;
+    }
+
+    /*  */
+    #header {
+        height: 44px;
+        /* height: auto; */
+        overflow: hidden;
+        background-color: #aa93fe;
+    }
+
+    #header .search_btn {
+        display: none;
+    }
+
+    #header .mobile-menu_dropdown {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 5px 20px 0px;
+        margin: 0;
+        transition: all 0.5s;
+        display: block;
+    }
+
+    #header .mobile-menu_dropdown:hover {
+        transform: rotate(180deg);
+    }
+
+    #nav {
+        /* width: calc(100% - 60px); */
+        width: calc(100%);
+    }
+
+    #nav li {
+        position: unset;
+        display: block;
+    }
+
+    #nav > li:first-child {
+        /* max-width: fit-content; */
+        display: inline-block;
+    }
+
+    #nav .subnav {
+        display: none;
+        position: unset;
+        /* display: block; */
+        background-color: #f3f6f8;
+        box-shadow: none;
+        transition: all 1s;
+    }
+
+    #nav li:hover .subnav {
+        /* display: block; */
+    }
+
+    #nav .subnav li {
+        border-bottom: 1px solid #aeaeaf;
+    }
+
+    #nav .subnav li a {
+        color: black;
+        /* padding: 5px 24px 0; */
+        padding-left: 24px;
+        line-height: 44px;
+    }
+
+    #nav .mobile-down_button .nav_arrow {
+        transform: rotate(-90deg);
+        display: inline-block;
+    }
+
+    #nav .mobile-down_button:hover .nav_arrow {
+        transform: rotate(0deg);
+        transition: all 0.5s;
+    }
+
+    #slider {
+        margin-top: 44px;
+        padding-top: calc(100vh - 44px);
+    }
+
+    #content .member_img {
+        height: 450px;
+    }
+
+    .tour_section .img_list .img_img {
+        height: 400px;
+    }
+    #content .member_img,
+    .tour_section .img_list .img_content {
+        margin-bottom: 8px;
+    }
+
+    .info_section .form-control {
+        padding: 8px;
+        width: 100%;
+        border: 1px solid #5a91fb;
+        border-radius: 4px;
+        outline: none;
+        font-family: inherit;
+    }
+
+    .info_section textarea {
+        height: calc(100vh - 550px);
+        max-height: 200px;
+        min-height: 100px;
+    }
+
+    .info_section .form-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        -webkit-appearance: none;
+    }
+
+    .content_map {
+        min-height: calc(100vh - 44px - 10vh - 56px);
+    }
+
+    #footer .footer-list a {
+        font-size: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
